@@ -207,7 +207,7 @@ void Chessboard::tetrisTurn() {
 
 void Chessboard::makeNextType() {
     const int ColorCount = 6;
-    mNextType = (TetrisBlock::TetrisType) rand(0, TetrisTypeCount - 1); // 随机生成一个形状 
+    mNextType = (TetrisBlock::TetrisType) rand(0, TETRIS_TYPE_COUNT - 1); // 随机生成一个形状 
     mNextColorId = (ConsoleColor::Colors) rand(1 + 8, ColorCount + 8);
 }
 
