@@ -1,0 +1,94 @@
+# Project: TetrisNew
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Controller.o IMenu.o MainMenu.o TestMain.o View.o Event.o MenuMgr.o App.o Scroll.o SettingsMenu.o Console.o ConsoleColor.o Screen.o TetrisBlock.o UnfinishedMenu.o Chessboard.o GameMenu.o PauseMenu.o GameLostMenu.o PutDownIslandAlgorithm.o AboutMenu.o LoadMenu.o Game.o
+LINKOBJ  = Controller.o IMenu.o MainMenu.o TestMain.o View.o Event.o MenuMgr.o App.o Scroll.o SettingsMenu.o Console.o ConsoleColor.o Screen.o TetrisBlock.o UnfinishedMenu.o Chessboard.o GameMenu.o PauseMenu.o GameLostMenu.o PutDownIslandAlgorithm.o AboutMenu.o LoadMenu.o Game.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = GameMenuLib.exe
+CXXFLAGS = $(CXXINCS) -std=c++11
+CFLAGS   = $(INCS) -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Controller.o: Controller.cpp
+	$(CPP) -c Controller.cpp -o Controller.o $(CXXFLAGS)
+
+IMenu.o: IMenu.cpp
+	$(CPP) -c IMenu.cpp -o IMenu.o $(CXXFLAGS)
+
+MainMenu.o: MainMenu.cpp
+	$(CPP) -c MainMenu.cpp -o MainMenu.o $(CXXFLAGS)
+
+TestMain.o: TestMain.cpp
+	$(CPP) -c TestMain.cpp -o TestMain.o $(CXXFLAGS)
+
+View.o: View.cpp
+	$(CPP) -c View.cpp -o View.o $(CXXFLAGS)
+
+Event.o: Event.cpp
+	$(CPP) -c Event.cpp -o Event.o $(CXXFLAGS)
+
+MenuMgr.o: MenuMgr.cpp
+	$(CPP) -c MenuMgr.cpp -o MenuMgr.o $(CXXFLAGS)
+
+App.o: App.cpp
+	$(CPP) -c App.cpp -o App.o $(CXXFLAGS)
+
+Scroll.o: Scroll.cpp
+	$(CPP) -c Scroll.cpp -o Scroll.o $(CXXFLAGS)
+
+SettingsMenu.o: SettingsMenu.cpp
+	$(CPP) -c SettingsMenu.cpp -o SettingsMenu.o $(CXXFLAGS)
+
+Console.o: Console.cpp
+	$(CPP) -c Console.cpp -o Console.o $(CXXFLAGS)
+
+ConsoleColor.o: ConsoleColor.cpp
+	$(CPP) -c ConsoleColor.cpp -o ConsoleColor.o $(CXXFLAGS)
+
+Screen.o: Screen.cpp
+	$(CPP) -c Screen.cpp -o Screen.o $(CXXFLAGS)
+
+TetrisBlock.o: TetrisBlock.cpp
+	$(CPP) -c TetrisBlock.cpp -o TetrisBlock.o $(CXXFLAGS)
+
+UnfinishedMenu.o: UnfinishedMenu.cpp
+	$(CPP) -c UnfinishedMenu.cpp -o UnfinishedMenu.o $(CXXFLAGS)
+
+Chessboard.o: Chessboard.cpp
+	$(CPP) -c Chessboard.cpp -o Chessboard.o $(CXXFLAGS)
+
+GameMenu.o: GameMenu.cpp
+	$(CPP) -c GameMenu.cpp -o GameMenu.o $(CXXFLAGS)
+
+PauseMenu.o: PauseMenu.cpp
+	$(CPP) -c PauseMenu.cpp -o PauseMenu.o $(CXXFLAGS)
+
+GameLostMenu.o: GameLostMenu.cpp
+	$(CPP) -c GameLostMenu.cpp -o GameLostMenu.o $(CXXFLAGS)
+
+PutDownIslandAlgorithm.o: PutDownIslandAlgorithm.cpp
+	$(CPP) -c PutDownIslandAlgorithm.cpp -o PutDownIslandAlgorithm.o $(CXXFLAGS)
+
+AboutMenu.o: AboutMenu.cpp
+	$(CPP) -c AboutMenu.cpp -o AboutMenu.o $(CXXFLAGS)
+
+LoadMenu.o: LoadMenu.cpp
+	$(CPP) -c LoadMenu.cpp -o LoadMenu.o $(CXXFLAGS)
+
+Game.o: Game.cpp
+	$(CPP) -c Game.cpp -o Game.o $(CXXFLAGS)
